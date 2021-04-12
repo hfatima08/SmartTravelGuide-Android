@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:typeface="serif"
+        android:title="Video Search" />
+    <item
+        android:id="@+id/menu_map"
+        android:icon="@drawable/location"
+        android:typeface="serif"
+        android:title="Map" />
+    <item
+        android:id="@+id/menu_weather"
+        android:icon="@drawable/cloud"
+        android:typeface="serif"
+        android:title="Weather" />
+
+</menu>

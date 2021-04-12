@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/mapbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/W_search"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:queryHint="Enter a City Name"
+        android:searchIcon="@drawable/cloud"
+        android:iconifiedByDefault="false"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/bg_round"/>
+
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/W_search"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="invisible"
+        android:background="#404A4949">
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="Country"
+            android:textColor="@android:color/black"
+            android:typeface="serif"
+            android:visibility="invisible"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible"
+            android:text="City"
+            android:layout_toRightOf="@id/country"
+            android:textColor="@android:color/black"
+            android:typeface="serif"
+            android:textSize="25dp" />
+
+
+        <ImageView
+            android:id="@+id/weather"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/country"
+            android:visibility="invisible"
+            android:src="@drawable/weatherlogo2" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/country"
+            android:visibility="invisible"
+            android:text="Date and Time"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/date"
+            android:visibility="invisible"
+            android:typeface="serif"
+            android:text="Description"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weather"
+            android:typeface="serif"
+            android:visibility="invisible"
+            android:text="temperature"
+            android:textAlignment="center"
+            android:textSize="75sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/r1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"
+        android:visibility="invisible"
+        android:background="#404A4949">
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="200dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:typeface="serif"
+            android:text="Feels like"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/like"
+            android:typeface="serif"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text="Longitude"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/latitude"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:typeface="serif"
+            android:text="Longitude"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/longitude"
+            android:typeface="serif"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text="Humidity"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/humidity"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text="Pressure"
+            android:typeface="serif"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_below="@id/pressure"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text="Wind"
+            android:typeface="serif"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/latitude2"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="75dp"
+            android:layout_toRightOf="@id/latitude"
+            android:text=": Latitude"
+            android:visibility="invisible"
+            android:typeface="serif"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/longitude2"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_toRightOf="@id/longitude"
+            android:layout_below="@id/latitude2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:typeface="serif"
+            android:text=": Sunrise"
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/humidity2"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_toRightOf="@id/humidity"
+            android:layout_below="@id/longitude2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text=": Humidity"
+            android:visibility="invisible"
+            android:typeface="serif"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/pressure2"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_toRightOf="@id/pressure"
+            android:layout_below="@id/humidity2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:visibility="invisible"
+            android:text=": Pressure"
+            android:typeface="serif"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/wind2"
+            android:layout_width="150dp"
+            android:layout_height="39dp"
+            android:layout_toRightOf="@id/wind"
+            android:layout_below="@id/pressure2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text=": Wind"
+            android:typeface="serif"
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
